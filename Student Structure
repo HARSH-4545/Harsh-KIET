@@ -1,0 +1,40 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+struct student
+{
+    char name[20];
+    int age; 
+    int tm;
+} 
+stud[100];
+int main()
+{
+    int i,n;
+    scanf("%d",&n);
+    for(i=1;i<=n; i++)
+    {
+        scanf("%s",stud[i].name);
+        scanf("%d",&stud[i].age);
+        scanf("%d",&stud[i].tm);
+        
+    }
+    
+    for(i=1; i<=n; i++)
+    {
+        printf("Name: %s\n",stud[i].name);
+         printf("Age: %d\n",stud[i].age);
+          printf("Total Marks: %d\n",stud[i].tm);
+          printf("\n");
+        }
+    
+
+    
+    
+     return 0;
+}
