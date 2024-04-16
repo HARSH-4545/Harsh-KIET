@@ -1,0 +1,39 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+struct car
+{
+    int id;
+    char model[20];
+    int rent;
+    int r;
+} c[100];
+
+int main() 
+{
+    int i,n;
+    scanf("%d",&n);
+    for(i=1;i<=n; i++)
+{    
+    scanf("%d",&c[i].id);
+     scanf("%s",c[i].model);
+      scanf("%d",&c[i].rent);
+      c[i].r=c[i].rent*10;
+}
+      
+for(i=1;i<=n;i++)
+{
+    printf("Car ID: %d\n",c[i].id);
+     printf("Model: %s\n",c[i].model);
+      printf("Rental Rate per Day: %d\n",c[i].rent);
+       printf("Total Rental Cost for Car %d: %d\n",i,c[i].rent*10);
+    
+}
+    
+     return 0;
+}
